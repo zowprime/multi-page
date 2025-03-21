@@ -7,27 +7,29 @@
   </head>
   <body>
     <a-scene>
-      <!-- Botão "entrar": um plano com texto -->
+      <!-- ÚNICO botão "enter" -->
       <a-entity id="entrarButton"
                 geometry="primitive: plane; height: 0.5; width: 1.5"
-                material="color: #FF1493"
+                material="color: #333"
                 position="0 1.6 -3"
                 class="raycastable"
                 scene-changer="1">
         <a-text value="enter"
                 align="center"
-                position="0 0 0.1"
-                color="#FF1493"></a-text>
+                position="0 0 0.02"
+                color="#FFF">
+        </a-text>
       </a-entity>
     </a-scene>
 
+    <!-- Script que registra o componente para mudar de cena -->
     <script>
       AFRAME.registerComponent('scene-changer', {
         schema: { type: 'string' },
         init: function () {
           this.el.addEventListener('click', () => {
             if (this.data === '1') {
-              window.location.href = '1.html';
+              window.location.href = '1.html'; // Redireciona para 1.html
             }
           });
         }
@@ -35,3 +37,4 @@
     </script>
   </body>
 </html>
+
