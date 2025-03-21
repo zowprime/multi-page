@@ -1,2 +1,16 @@
-<!-- Modèle 3D, utilise le composant scene-changer pour changer la scène -->
-<a-cylinder id="changer" scene-changer="" position="0 0 -5" class="raycastable" rotation="-45 -45 0" material="color: #00ff33" height="3" radius="1.5"></a-cylinder>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ambiente A-Frame</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- Incluindo o componente de ambiente -->
+    <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Ambiente do A-Frame com o preset "forest" -->
+      <a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>
+    </a-scene>
+  </body>
+</html>
