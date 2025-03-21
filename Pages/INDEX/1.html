@@ -4,16 +4,19 @@
     <meta charset="utf-8">
     <title>Ambiente A-Frame</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <!-- Script do componente de ambiente -->
+    <!-- Carrega o componente de ambiente -->
     <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <!-- Adiciona uma câmera manualmente -->
-      <a-entity camera position="0 1.6 0" look-controls></a-entity>
-
+      <!-- Câmera posicionada para olhar o cenário -->
+      <a-camera position="0 1.6 5" look-controls></a-camera>
+      
       <!-- Ambiente com o preset "forest" -->
       <a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>
+      
+      <!-- Adiciona um céu com cor para forçar a renderização -->
+      <a-sky color="#88c"></a-sky>
     </a-scene>
   </body>
 </html>
