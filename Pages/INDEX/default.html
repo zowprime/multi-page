@@ -7,7 +7,7 @@
   </head>
   <body>
     <a-scene>
-      <!-- Botão feito com um plano, com o texto "entrar" -->
+      <!-- Botão "entrar": um plano com texto -->
       <a-entity id="entrarButton"
                 geometry="primitive: plane; height: 0.5; width: 1.5"
                 material="color: #333"
@@ -21,18 +21,21 @@
       </a-entity>
     </a-scene>
 
-    <!-- Componente para redirecionar a cena -->
     <script>
       AFRAME.registerComponent('scene-changer', {
-        schema: {type: 'string'},
+        schema: { type: 'string' },
         init: function () {
           this.el.addEventListener('click', () => {
-            const sceneName = this.data;
-            if (sceneName === '1') {
+            if (this.data === '1') {
               window.location.href = '1.html';
             }
           });
         }
+      });
+    </script>
+  </body>
+</html>
+
       });
     </script>
   </body>
