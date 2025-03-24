@@ -1,1 +1,28 @@
+<a-entity id="sala" obj-model="obj: ./SALA2/SALA.obj; mtl: ./SALA2/SALA.mtl" position="-41.190 -0.00048 -16.040" scale="0.010 0.010 0.010" animation="property: position; to:-0.080 0.075 -4.687; dur: 3000; loop: true; dir: alternate; autoplay: true; enabled: true;"></a-entity>
 
+<a-entity id="checkpoint">
+<a-entity id="bottom" obj-model="obj: ./checkpoint/bottom-checkpoint.obj" material="color: #00FFFF" position=" -0.080 0.075 -4.687" scale="0.000030 0.000030 0.000030" rotation="-90.000 0.000 0.000"></a-entity>
+<a-entity id="anime" position=" 0 0 0"  animation="property: position; to: 0 0.2 0; dur: 300; loop: true; dir: alternate; autoplay: true; enabled: true;">
+ <a-entity id="top" obj-model="obj: ./checkpoint/top-checkpoint.obj" material="color: #00FFFF" position=" -0.080 0.950 -4.687" scale="0.000020 0.000030 0.000030" rotation="-90.000 0.000 0.000" animation="property: rotation; to: -90.000 359 0.000; dur: 3000; loop: true; dir: alternate; autoplay: true; enabled: true;"></a-entity>
+</a-entity>
+</a-entity>
+ 
+
+<a-sky color="#88c"></a-sky>
+
+ <a-entity 
+  id="changer"
+  scene-changer=""
+  geometry="primitive: plane; height: 0.5; width: 1.5"    
+  material="color: #333"
+  position="-0.100 1.490 -6.200"
+  class="raycastable">
+
+  <a-text
+    value="BACK TO LOBBY"
+    align="center"
+    position="0 0 0.02"
+    color="#FFF">
+  </a-text>
+  
+</a-entity>
