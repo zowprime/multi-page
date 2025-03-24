@@ -2,7 +2,7 @@
 
 <a-entity id="checkpoint" material="color: #00FFFF">
 <a-entity id="bottom" obj-model="obj: ./checkpoint/bottom-checkpoint.obj" position=" -0.080 0.075 -4.687" scale="0.000030 0.000030 0.000030" rotation="-90.000 0.000 0.000"></a-entity>
-<a-entity id="bottom" obj-model="obj: ./checkpoint/top-checkpoint.obj" position=" -0.080 0.950 -4.687" scale="0.000020 0.000030 0.000030" rotation="-90.000 0.000 0.000"></a-entity>
+<a-entity id="top" obj-model="obj: ./checkpoint/top-checkpoint.obj" position=" -0.080 0.950 -4.687" scale="0.000020 0.000030 0.000030" rotation="-90.000 0.000 0.000" shadow="cast: true; receive: true" animation__set0="property: object3D.position.z; from: 3.866; to: 3.867; dur: 3000; delay: 0; loop: false; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;" animation__set1="property: rotation; to: 179 0 0; dur: 3000; delay: 0; loop: false; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true; startEvents: animationcomplete__set0, animationcomplete__set3;" animation__set2="property: rotation; to: 0 0 0; dur: 3000; delay: 0; loop: false; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true; startEvents: animationcomplete__set1;" animation__set3="property: object3D.position.z; from: 3.866; to: 3.867; dur: 3000; delay: 0; loop: false; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true; startEvents: animationcomplete__set2"></a-entity>
 </a-entity>
 
 <a-sky color="#88c"></a-sky>
