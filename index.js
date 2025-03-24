@@ -6,6 +6,13 @@ var SceneData = $("a-scene")  // Selects the A-Frame scene element
 var scene     = SceneData[0]  // Gets the first A-Frame scene element
 var MainScene = $("#MainScene")[0]  // Gets the main scene element with the ID "MainScene"
 
+<a-entity id="sala"
+  obj-model="obj: url(../SALA2/SALA.obj); mtl: url(../SALA2/SALA.mtl)"
+  obj-model-debug <!-- Esta linha é importante -->
+  position="-4.41574 -0.00048 -5.06616"
+  scale="1 1 1">
+</a-entity>
+
 // Contains the name of the document in a variable
 let PathName = location.pathname.split("/")  // Splits the URL path into an array
 PathName = (PathName[PathName.length - 1].split(".")[0] || "index").toUpperCase()  // Gets the last part of the path, removes the file extension, and converts it to uppercase. Defaults to "INDEX" if no file name is found.
