@@ -6,12 +6,16 @@ var SceneData = $("a-scene")  // Selects the A-Frame scene element
 var scene     = SceneData[0]  // Gets the first A-Frame scene element
 var MainScene = $("#MainScene")[0]  // Gets the main scene element with the ID "MainScene"
 
-<a-entity id="sala"
-  obj-model="obj: url(../SALA2/SALA.obj); mtl: url(../SALA2/SALA.mtl)"
-  obj-model-debug <!-- Esta linha é importante -->
-  position="-4.41574 -0.00048 -5.06616"
-  scale="1 1 1">
-</a-entity>
+AFRAME.registerComponent('obj-model-debug', {
+  init: function() {
+    this.el.addEventListener('model-loaded', () => {
+      console.log('✅ Modelo carregado com sucesso!');
+    });
+    this.el.addEventListener('model-error', (evt) => {
+      console.error('❌ Erro ao carregar modelo:', evt.detail);
+    });
+  }
+});
 
 // Contains the name of the document in a variable
 let PathName = location.pathname.split("/")  // Splits the URL path into an array
